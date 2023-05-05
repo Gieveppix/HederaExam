@@ -1,0 +1,54 @@
+The schedule ID is 0.0.4569553
+The scheduled transaction ID is 0.0.4567508@1683282630.719614883?scheduled
+The transaction consensus status is 22
+/Users/mmilanovic/Documents/HederaTest/hederaTest/node_modules/@hashgraph/sdk/lib/ReceiptStatusError.cjs:43
+    super(props, `receipt for transaction ${props.transactionId.toString()} contained error status ${props.status.toString()}`);
+    ^
+
+ReceiptStatusError: receipt for transaction 0.0.4567508@1683282635.535047474 contained error status SCHEDULE_ALREADY_DELETED
+    at new ReceiptStatusError (/Users/mmilanovic/Documents/HederaTest/hederaTest/node_modules/@hashgraph/sdk/lib/ReceiptStatusError.cjs:43:5)
+    at TransactionReceiptQuery._mapStatusError (/Users/mmilanovic/Documents/HederaTest/hederaTest/node_modules/@hashgraph/sdk/lib/transaction/TransactionReceiptQuery.cjs:273:12)
+    at TransactionReceiptQuery.execute (/Users/mmilanovic/Documents/HederaTest/hederaTest/node_modules/@hashgraph/sdk/lib/Executable.cjs:644:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TransactionResponse.getReceipt (/Users/mmilanovic/Documents/HederaTest/hederaTest/node_modules/@hashgraph/sdk/lib/transaction/TransactionResponse.cjs:88:21)
+    at async main (/Users/mmilanovic/Documents/HederaTest/hederaTest/task4.js:71:20) {
+  status: Status { _code: 212 },
+  transactionId: TransactionId {
+    accountId: AccountId {
+      shard: Long { low: 0, high: 0, unsigned: false },
+      realm: Long { low: 0, high: 0, unsigned: false },
+      num: Long { low: 4567508, high: 0, unsigned: false },
+      aliasKey: null,
+      evmAddress: null,
+      _checksum: null
+    },
+    validStart: Timestamp {
+      seconds: Long { low: 1683282635, high: 0, unsigned: false },
+      nanos: Long { low: 535047474, high: 0, unsigned: false }
+    },
+    scheduled: false,
+    nonce: null
+  },
+  transactionReceipt: TransactionReceipt {
+    status: Status { _code: 212 },
+    accountId: null,
+    fileId: null,
+    contractId: null,
+    topicId: null,
+    tokenId: null,
+    scheduleId: null,
+    exchangeRate: ExchangeRate {
+      hbars: 30000,
+      cents: 173376,
+      expirationTime: 2023-05-05T11:00:00.000Z,
+      exchangeRateInCents: 5.7792
+    },
+    topicSequenceNumber: Long { low: 0, high: 0, unsigned: false },
+    topicRunningHash: Uint8Array(0) [],
+    totalSupply: Long { low: 0, high: 0, unsigned: false },
+    scheduledTransactionId: null,
+    serials: [],
+    duplicates: [],
+    children: []
+  }
+}
